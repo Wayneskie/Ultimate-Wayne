@@ -19,6 +19,20 @@
             text-align: center;
         }
 
+        nav {
+            margin: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
         .content {
             margin: 20px;
         }
@@ -45,6 +59,7 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            margin-top: 10px;
         }
 
         .github-section {
@@ -83,19 +98,33 @@
     <h1>Welcome to Ultimate Wayne</h1>
 </header>
 
-<div class="content">
-    <!-- Download Area -->
-    <div class="download-section">
-        <h2>Download Area</h2>
-        <p>Here you can download our latest files:</p>
-        <a href="your-download-link" class="download-link">Download File</a>
-    </div>
+<!-- Navigation -->
+<nav>
+    <a href="#downloads">Go to Download Section</a>
+</nav>
 
+<div class="content">
     <!-- GitHub Section -->
     <div class="github-section">
         <h2>GitHub Area</h2>
         <p>Check out our projects on GitHub:</p>
-        <a href="https://github.com/Wayneskie" class="github-link">Visit GitHub</a>
+        <a href="https://github.com/your-github-profile" class="github-link">Visit GitHub</a>
+    </div>
+
+    <!-- Download Section -->
+    <div id="downloads" class="download-section">
+        <h2>Download Area</h2>
+        <p>Here you can download our latest apps:</p>
+
+        <!-- Shizuka App -->
+        <h3>Shizuka App</h3>
+        <p>The Shizuka App is designed for ultimate privacy and performance.</p>
+        <a href="your-shizuka-app-download-link" class="download-link">Download Shizuka App</a>
+
+        <!-- Ultima Wayne Development -->
+        <h3>Ultima Wayne Development</h3>
+        <p>Ultima Wayne is in active development. Download the latest version below.</p>
+        <a href="your-ultima-wayne-download-link" class="download-link">Download Ultima Wayne</a>
     </div>
 </div>
 
