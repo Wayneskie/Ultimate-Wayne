@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultimate Wayne - Download Area</title>
+
+    <!-- Favicon Link -->
+    <link rel="icon" href="your-icon-url" type="image/x-icon">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,6 +45,13 @@
             color: #333;
         }
 
+        .project-info {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
         .download-section {
             background-color: white;
             padding: 20px;
@@ -62,6 +73,17 @@
             margin-top: 10px;
         }
 
+        .inactive-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: grey;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: not-allowed;
+        }
+
         .github-section {
             background-color: white;
             padding: 20px;
@@ -79,6 +101,40 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
+        }
+
+        .discord-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: grey; /* Marked as inactive */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: not-allowed;
+        }
+
+        .swipeable {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 200px; /* Adjust height as needed */
+            margin: 20px 0;
+        }
+
+        .swipeable-content {
+            display: flex;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .swipeable-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         footer {
@@ -104,11 +160,37 @@
 </nav>
 
 <div class="content">
+    <!-- Project Information -->
+    <div class="project-info">
+        <h2>This is our project, Ultimate Wayne!</h2>
+        <p>Explore our innovative applications and engage with our community.</p>
+        <p><strong>Discord is currently under development.</strong></p>
+        <a href="#" class="discord-link">Discord (Inactive)</a>
+    </div>
+
+    <!-- Swipeable Section -->
+    <div class="swipeable">
+        <div class="swipeable-content">
+            <div class="swipeable-item">
+                <h3>Swipe to See More!</h3>
+                <p>Welcome to Ultimate Wayne. Here you'll find the latest updates on our projects.</p>
+            </div>
+            <div class="swipeable-item">
+                <h3>Latest News</h3>
+                <p>Stay tuned for the latest features and developments in our applications.</p>
+            </div>
+            <div class="swipeable-item">
+                <h3>Contact Us</h3>
+                <p>If you have any questions or feedback, feel free to reach out!</p>
+            </div>
+        </div>
+    </div>
+
     <!-- GitHub Section -->
     <div class="github-section">
         <h2>GitHub Area</h2>
         <p>Check out our projects on GitHub:</p>
-        <a href="https://github.com/Wayneskie" class="github-link">Visit GitHub</a>
+        <a href="https://github.com/your-github-profile" class="github-link">Visit GitHub</a>
     </div>
 
     <!-- Download Section -->
@@ -119,12 +201,12 @@
         <!-- Shizuka App -->
         <h3>Shizuka App</h3>
         <p>The Shizuka App is designed for ultimate privacy and performance.</p>
-        <a href="your-shizuka-app-download-link" class="download-link">Download Shizuka App</a>
+        <a href="https://www.mediafire.com/file/93hg02m1cmvfo28/build-1089545-20241006073228.apk/file" class="download-link">Download Shizuka App</a>
 
         <!-- Ultima Wayne Development -->
         <h3>Ultima Wayne Development</h3>
-        <p>Ultima Wayne is in active development. Download the latest version below.</p>
-        <a href="your-ultima-wayne-download-link" class="download-link">Download Ultima Wayne</a>
+        <p>Ultima Wayne is currently inactive as it is not released yet.</p>
+        <a href="#" class="inactive-link">Coming Soon!</a>
     </div>
 </div>
 
@@ -132,5 +214,23 @@
     <p>© 2024 Ultimate Wayne | All Rights Reserved</p>
 </footer>
 
+<script>
+    // Basic Swipe Functionality
+    let index = 0;
+    const items = document.querySelectorAll('.swipeable-item');
+    const totalItems = items.length;
+
+    function showItem() {
+        const swipeableContent = document.querySelector('.swipeable-content');
+        swipeableContent.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // Optional: Auto-Swipe every 5 seconds
+    setInterval(() => {
+        index = (index + 1) % totalItems;
+        showItem();
+    }, 5000);
+</script>
+
 </body>
-</html>
+                    </html>
